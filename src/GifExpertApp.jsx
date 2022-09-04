@@ -3,6 +3,7 @@ import { AddCategory, GifGrid } from "./componentes/index.js";
 
 export const GifExpertApp = () => {
   const [categories, setCategories] = useState(["dragon ball"]);
+  //console.log("Categories: ", categories);
 
   const onAddCategory = (newCategory) => {
     if (categories.includes(newCategory)) return;

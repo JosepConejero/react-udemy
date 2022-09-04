@@ -3,6 +3,7 @@ import { useFetchGifs } from "../hooks/useFetchGifs";
 import { GifItem } from "./GifItem";
 //import { useFetchGifs, GifItem } from "../indexes/varios.js"; // este lo he creado yo
 //import { getGifs } from "../helpers/getGifs";
+import PropTypes from "prop-types";
 
 export const GifGrid = ({ category }) => {
   const { images, isLoading, deleteHandler } = useFetchGifs(category);
@@ -41,4 +42,8 @@ export const GifGrid = ({ category }) => {
       </div>
     </>
   );
+};
+
+GifGrid.propTypes = {
+  category: PropTypes.string.isRequired,
 };
